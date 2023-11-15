@@ -7,3 +7,6 @@ https://kuroshiro.org/
 1. 修复了一些小bug
 2. 部分兼容了网易云音乐2.x版本
 3. 兼容了Apple Music-like lyrics
+
+# Version 0.1.1
+测试出Apple Music-like lyrics开启逐词歌词后，使用本插件会产生问题。故在设置界面做出提示。
