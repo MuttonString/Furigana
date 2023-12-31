@@ -360,7 +360,7 @@ function doRuby() {
                 temp = temp.replace(/<rp>\(<\/rp><rt>[^ぁ-ヿ]<\/rt><rp>\)<\/rp>/g, ''); // 简体中文独有汉字会把本字注音上去，需删除
                 if (!isAcc) {
                     temp = temp.replace(/<ruby>([㐀-鿿々]+?)<\/ruby>[（\(]([ぁ-ヿ]+?)[）\)]/g, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>（$2）'); // 将未能成功机器注音，但后面跟着括号注音的汉字注音
-                    temp = temp.replace(/<ruby>([㐀-鿿々]+?)<rp>\(<\/rp><rt>([ぁ-ヿ]+?)<\/rt><rp>\)<\/rp><\/ruby><ruby>([㐀-鿿々]+?)<rp>\(<\/rp><rt>([ぁ-ヿ]+?)<\/rt><rp>\)<\/rp><\/ruby>[（\(]([ぁ-ヿ]+?)[）\)]/g, '<ruby>$1$3<rp>(</rp><rt>$5</rt><rp>)</rp></ruby>（$5）'); // 修改已成功机器注音，但后面跟着括号注音的两个汉字词的注音
+                    // temp = temp.replace(/<ruby>([㐀-鿿々]+?)<rp>\(<\/rp><rt>([ぁ-ヿ]+?)<\/rt><rp>\)<\/rp><\/ruby><ruby>([㐀-鿿々]+?)<rp>\(<\/rp><rt>([ぁ-ヿ]+?)<\/rt><rp>\)<\/rp><\/ruby>[（\(]([ぁ-ヿ]+?)[）\)]/g, '<ruby>$1$3<rp>(</rp><rt>$5</rt><rp>)</rp></ruby>（$5）'); // 修改已成功机器注音，但后面跟着括号注音的两个汉字词的注音
                     temp = temp.replace(/<ruby>([㐀-鿿々]+?)<rp>\(<\/rp><rt>([ぁ-ヿ]*?)<\/rt><rp>\)<\/rp><\/ruby>[（\(]([ぁ-ヿ]+?)[）\)]/g, '<ruby>$1<rp>(</rp><rt>$3</rt><rp>)</rp></ruby>（$3）'); // 修改已成功机器注音，但后面跟着括号注音的单个汉字词的注音
                 }
                 lyrics[i].innerHTML = temp;
