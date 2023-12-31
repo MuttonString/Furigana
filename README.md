@@ -3,6 +3,8 @@
 使用了kuroshiro的在线API：<br>
 https://kuroshiro.org/
 
+##**`由于Kuroshiro的在线API似乎不能用了，所以最主要的功能失效了。争取2024年春节前更新一个新版本，把API换掉`
+
 ## Version 0.1.0
 1. 修复了一些小bug
 2. 部分兼容了网易云音乐2.x版本
